@@ -1,0 +1,103 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Game</title>
+    <br><br>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: rgb(122, 220, 220);
+        }
+
+        h1, h2, p {
+            margin: 0;
+        }
+
+        form {
+            margin: 40px 50px;
+            border: 3px solid rgb(127, 134, 137);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .question {
+            display: none;
+            text-align: center;
+        }
+    </style>
+   
+    <script>
+        function showQuestion(questionId) {
+            var question = document.getElementById(questionId);
+            question.style.display = "block";
+        }
+
+       
+    </script>
+</head>
+<body>
+    
+    <h2>Welcome to the Quiz!</h2>
+    <br>
+    <form action="/submit" method="post">
+        
+        <div id="question1" class="question" style="display:block;">
+            <p>What does CPU stand for?</p>
+            <input type="text" name="q1">
+            <br>
+            <button type="button" onclick="showQuestion('question2')">Next Question</button>
+        </div>
+        <br><br>
+        <div id="question2" class="question">
+            <p>What does GPU stand for?</p>
+            <input type="text" name="q2">
+            <br>
+            <button type="button" onclick="showQuestion('question3')">Next Question</button>
+        </div>
+        <br><br>
+
+        <div id="question3" class="question">
+            <p>Who is the CEO of Google Company?</p>
+            <input type="text" name="q3">
+            <br>
+            <button type="button" onclick="showQuestion('question4')">Next Question</button>
+        </div>
+        <br>
+        <div id="question4" class="question">
+            <p>Who is the CEO of Microsoft company?</p>
+            <input type="text" name="q4">
+            <br>
+            <button type="button" onclick="showQuestion('question5')">Next Question</button>
+        </div>
+        <br>
+        <div id="question5" class="question">
+            <p>What does RAM stand for?</p>
+            <input type="text" name="q5">
+            <br>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+    
+</body>
+</html>

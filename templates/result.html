@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Game - Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: rgb(122, 220, 220);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1, p {
+            margin: 0;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Quiz Result</h1>
+        <p>You got {{ score }} questions correct!</p>
+        <p>You got {{ scored }} questions incorrect!</p>
+        <p>You scored {{ percentage }}%.</p>
+        <br><br>
+        <a href="/exit"> Exit </a>
+    </div>
+</body>
+</html>
